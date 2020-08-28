@@ -3,18 +3,31 @@ const loader = document.getElementById('loader');
 
 let photosArray = [];
 
+/** Metodo para crear atributo a elementos del DOM */
+function setAttributes(element, attributes) {
+    // for in es muy util con objetos { llave1: atributo1, llave2: atributo2 }
+    for(const key in attributes) {
+        element.setAttribute(key, attributes[key]);
+    }
+}
+
 /** Método para crear elementos para links y fotos agregandolas al DOM */ 
 function displayPhotos() {
     photosArray.forEach((photo) => {
         // Crear <a></a> para hacer link a Unsplash
         const item = document.createElement('a');
-        item.setAttribute('href', photo.links.html);
-        item.setAttribute('target', '_blank');
+        setAttributes( item, 
+            { href: photo.links.html,
+              target: '_blank' });
         // crear <img> para la foto
         const img = document.createElement('img');
-        img.setAttribute('src', photos.urls.regular);
-        img.setAttribute('alt', photo.alt_descripcion);
-        img.setAttribute('title', photo.alt_descripcion);
+        setAttributes( img,
+            { src: photo.urls.regular,
+              alt: photo.alt_descripcion,
+              title: photo.alt_descripcion });
+        // Metiendo el img dentro del a, y luego estos dentro del imageContainer
+        item.appendChild(img);
+        imageContainer.appendChild(item);
     });
 }
 

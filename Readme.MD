@@ -18,5 +18,15 @@ https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom&preview.text=I
 Royalty free images
 ```
 https://unsplash.com/
-https://unsplash.com/documentation
+https://unsplash.com/documentation#get-a-random-photo
+```
+
+W3Schools Foreach
+```
+https://www.w3schools.com/jsref/jsref_foreach.asp
+```
+
+Foreach vs For Loops Article
+```
+https://alligator.io/js/foreach-vs-for-loops/
 ```
