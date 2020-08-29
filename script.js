@@ -1,7 +1,7 @@
 // Unslash API
-const count = 30;
+let photosToLoad = 5;
 const apiKey = 'TzTmzdVhU0N4x38AllxFmt3Mxky7a1rXoZc6TbAdrO8';
-const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
+let apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${photosToLoad}`;
 
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
@@ -28,19 +28,21 @@ function setAttributes(element, attributes) {
  * Este metodo se cargará por cada imagen individual.
  */
 function imageLoaded() {
-    console.log('image loaded');
     imagesLoaded++;
     if (imagesLoaded === totalImages) {
         ready = true;
+        loader.hidden = true;
         imagesLoaded = 0;
-        console.log('ready =', ready);
+        if (photosToLoad < 20) {
+            photosToLoad = 30;
+            apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${photosToLoad}`;
+        }
     }
 }
 
 /** Método para crear elementos para links y fotos agregandolas al DOM */
 function displayPhotos() {
     totalImages = photosArray.length;
-    console.log('totalImages:',totalImages);
     photosArray.forEach((photo) => {
         // Crear <a></a> para hacer link a Unsplash
         const item = document.createElement('a');
