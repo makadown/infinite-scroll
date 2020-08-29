@@ -3,6 +3,8 @@
 2nd Project from the course https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume
 
 
+Published here: https://makadown.github.io/infinite-scroll/
+
 ## Funcionality
 
 ![alt text](Infinite+Scroll+Functionality.png "Title")
