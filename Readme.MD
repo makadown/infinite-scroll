@@ -3,6 +3,10 @@
 2nd Project from the course https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume
 
 
+## Funcionality
+
+![alt text](Infinite+Scroll+Functionality.png "Title")
+
 ## Resources
 
 Loader SVGs, icons, background & more...
@@ -21,9 +25,10 @@ https://unsplash.com/
 https://unsplash.com/documentation#get-a-random-photo
 ```
 
-W3Schools Foreach
+W3Schools Foreach, DOM Events
 ```
 https://www.w3schools.com/jsref/jsref_foreach.asp
+https://www.w3schools.com/jsref/dom_obj_event.asp
 ```
 
 Foreach vs For Loops Article

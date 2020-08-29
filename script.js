@@ -47,5 +47,21 @@ async function getPhotos() {
     }
 }
 
+/** Checar si el scroll esta cerca del fondo de pantalla para cargar mas fotos */
+window.addEventListener('scroll', () => {
+    /*  window.scrollY 
+      representa la distancia desde el top de la pagina donde el usuario ha scrolleado.
+        window.innerHeight 
+     representa la altura total de la ventana del navegador
+        documento.body.offsetHeight
+     representa la altura de toodo lo del body, incluyendo lo que no se ve a la vista.
+     
+     Necesitamos sustraer de offsetHeight para activar el evento antes que se alcance
+     el fondo de todo... */
+     if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 ) {
+         getPhotos();
+     }
+});
+
 // Al cargar
 getPhotos();
